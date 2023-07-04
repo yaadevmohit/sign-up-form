@@ -1,0 +1,49 @@
+/* css root variables */
+/* :root {
+
+} */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: ; */
+    /* color: */
+}
+
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.company-image {
+    justify-content: center;
+    background-image: url(assets/honda-background.jpeg);
+    background-position: center;
+    background-size: center;
+    background-repeat: no-repeat;
+    width:30vw;
+}
+
+.company-header {
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: baseline;
+    margin-top: 4rem;
+
+}
+
+.sign-up-form {
+    width: 60vw;
+    padding: 8rem 2rem;
+}
+
+.about-company {
+    padding-bottom: 2rem;
+}
+
+
