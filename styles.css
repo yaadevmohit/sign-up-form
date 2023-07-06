@@ -1,14 +1,16 @@
-/* css root variables */
-/* :root {
-
-} */
-
+:root {
+    --company-header: 2rem;
+    --form-background: lightgray;
+    --form-center-background: snow;
+    --form-main-font: #000000;
+} 
 body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     /* font-family: ; */
     /* color: */
+    /* background: var(--form-background); */
 }
 
 
@@ -25,7 +27,7 @@ body {
     background-position: center;
     background-size: center;
     background-repeat: no-repeat;
-    width:30vw;
+    width:40vw;
 }
 
 .company-header {
@@ -34,16 +36,121 @@ body {
     flex-flow: row wrap;
     justify-content: baseline;
     margin-top: 4rem;
-
+    justify-content: center;
+    margin-top: 140px;
+    background: rgba(0, 0, 0, 0.4);
 }
 
+.company-tagline {
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: var(--company-header);
+}
 .sign-up-form {
     width: 60vw;
-    padding: 8rem 2rem;
+    background: var(--form-background);
 }
 
 .about-company {
-    padding-bottom: 2rem;
+    padding: 2rem 4rem;
+    color: var(--form-main-font);
 }
 
+.about-company > p, .form-header {
+    font-size: 28px;
+}
+.form-header {
+    width: 100%;
+    text-align: center;
+}
 
+.form-content {
+    display: flex;
+    flex-direction: column;
+    column-gap: 4rem;
+}
+ .input-form {
+    background: var(--form-center-background);
+    color: var(--form-main-font);
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 6px;
+    /* box-shadow:hsl(from blue h s l) */
+    justify-content: center;
+    box-shadow: 2px 2px 4px rgba(1, 1, 0, 0.4);
+    padding-bottom: 20px;
+      
+}
+
+.form-field > input {
+    display: block;
+    padding: 10px;
+    background-color: lightgray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+}
+
+.form-field >input:focus {
+    outline: none;
+    background-color: #333333;
+      
+}
+
+.form-field {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 6px 10px;
+    width: 40%;
+}
+
+.form-submit {
+    margin: 20px 0px 0px 70px;
+}
+
+.form-submit > button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+      
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        flex-flow: column nowrap;
+    }
+
+    .company-image, .sign-up-form {
+        width: 100%;
+    }
+
+    .form-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 2px 4px;
+        width: 100%;
+    }
+
+    .input-form  {
+        flex-direction: column;
+
+    }
+    .form-content {
+        width: 100%;
+    }
+    .form-field > input {
+        width: 100%;
+    }
+
+
+}
