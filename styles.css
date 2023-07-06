@@ -120,8 +120,13 @@ body {
     border-radius: 4px;
     font-size: 16px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
       
+}
+
+.form-submit > button:hover {
+    background-color: black;
+    transform: scale(1.01);
 }
 
 @media only screen and (max-width: 600px) {
@@ -140,17 +145,11 @@ body {
         margin: 2px 4px;
         width: 100%;
     }
-
-    .input-form  {
-        flex-direction: column;
-
+    .input-form {
+        flex-flow: column nowrap;
     }
+
     .form-content {
         width: 100%;
     }
-    .form-field > input {
-        width: 100%;
-    }
-
-
 }
